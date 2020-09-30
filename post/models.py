@@ -17,3 +17,6 @@ class Post(models.Model):
     def __str__(self): return self.message
 
     def vote_total(self): return self.up_votes + self.down_votes
+
+    class Meta:
+        ordering = ['-date_created']
